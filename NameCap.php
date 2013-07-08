@@ -5,42 +5,41 @@
  *
  * Properly formats an English name string
  *
- * @package		CodeIgniter
+ * @package	CodeIgniter
  * @subpackage	Libraries
  * @category	Libraries
- * @author		Jeremy Law
+ * @author	Jeremy Law
  * @link		
  */
 
 class NameCap {
 
 	/*
-	*	An array to hold the default delimters
+	* An array to hold the default delimters
 	*/
 	var $delims = array('\'', 'mac', 'mc', '-', 'Mac', 'Mc', '(');
 	var $fixedName;
-	var $CI;
 	
-
+	
 	/*
-	*	On construct add the supplied delimiters to the delimiter array
+	* On construct add the supplied delimiters to the delimiter array
 	*/
 	public function __construct ($delims = array()) {
 		
 		foreach ($delims as $key => $item) {
-
+	
 			if (!in_array ($item, $this->delims)) {
-
+	
 				array_push ($this->delims, $item);
-
+	
 			}
-
+	
 		}
 		
 	}
 
 	/*
-	*
+	* Fix the string provided
 	*/
 	public function fixName ($name) {
 
