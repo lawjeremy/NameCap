@@ -12,6 +12,7 @@ I thought someone might find this useful
 Outputs: Sheamus O'Malley
 
     $this->load->library('NameCap');
+    
     echo $this->namecap->fixName('sir john a. macdonald');
     
 Outputs: Sir John A. MacDonald
